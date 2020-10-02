@@ -1,0 +1,4 @@
+takafumi:
+  name: Takafumi
+  email: jktkfm5535@gmail.com
+  password_digest: <%= User.digest('password') %>

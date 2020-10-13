@@ -2,26 +2,43 @@ takafumi:
   name: Takafumi
   email: jktkfm5535@gmail.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
   admin: true
   
 daiki:
   name: Daiki
   email: koizumi@gmail.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 hiroyuki:
   name: Hiroyuki
   email: katayama@gmail.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
   
 shinichi:
   name: Shinichi
   email: utsunomiya@gmail.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+non_activated:
+  name: Non-activated
+  email: non-activated@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+  activated_at: <%= Time.zone.now %> 
   
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
